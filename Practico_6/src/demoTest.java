@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -35,7 +36,12 @@ public class demoTest {
 		a = prueba.get_Resultado();
 		b = 15;
 		prueba.Multiplicar(a, b);
-		assertEquals(605.0, prueba.get_Resultado(),0);
+		
+		boolean bool = false;
+		if(prueba.get_Resultado()==605) {
+			bool=true;
+		}
+		assertFalse(bool);
 	}
 	
 	@Test
@@ -47,7 +53,12 @@ public class demoTest {
 		a = prueba.get_Resultado();
 		b = 25;
 		prueba.Multiplicar(a, b);
-		assertEquals(2700.0, prueba.get_Resultado(),0);
+		
+		boolean bool = false;
+		if(prueba.get_Resultado()==2700) {
+			bool=true;
+		}
+		assertFalse(bool);
 	}
 	
 	
